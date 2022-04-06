@@ -12,7 +12,9 @@ let computerNum = 0;
 let playButton = document.getElementById("play-button");
 let userInput = document.getElementById('user-input');
 let resultArea = document.getElementById('result-area');
-let resetButton = document.getElementById('reset-button')
+let resetButton = document.getElementById('reset-button');
+let chance = 5; 
+let gameOver = false;
 
 playButton.addEventListener('click', play);
 resetButton.addEventListener('click', reset)
@@ -22,21 +24,29 @@ function pickRandomNum() {
   console.log('정답' ,computerNum)
 }
   function play() {
-    console.log('게임시작')
+
+    chance --;
     let userValue = userInput.value;
     if(userValue < computerNum) {
-      console.log('UP!!!!')
+      resultArea.textContent="UP!!!"
     } else if (userValue > computerNum) {
-      console.log('DOWN!!!')
+      resultArea.textContent="DOWN!!!"
     } else {
-      console.log('정답입니다!!!')
+      resultArea.textContent="정답입니다!!!"
+    }
+    if(chance < 1) {
+      gameOver = true;
+    }
+
+    if(gameOver == true) {
+      playButton.disabled = true;
     }
   }
 
   function reset(){
     // 사용자가 작성한 창이 리셋되고 
     userInput.value = ''
-    // 새로운 정답이 생성된고
+    // 새로운 정답이 생성되고 
     pickRandomNum();
     resultArea.textContent = "정답을 맞춰보세요.!!!"
   }
