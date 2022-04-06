@@ -12,8 +12,10 @@ let computerNum = 0;
 let playButton = document.getElementById("play-button");
 let userInput = document.getElementById('user-input');
 let resultArea = document.getElementById('result-area');
+let resetButton = document.getElementById('reset-button')
 
 playButton.addEventListener('click', play);
+resetButton.addEventListener('click', reset)
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100)+1;
@@ -28,6 +30,14 @@ function pickRandomNum() {
     } else {
       resultArea.textContent= "정답입니다.!!!"
     }
+  }
+
+  function reset(){
+    // 사용자가 작성한 창이 리셋되고 
+    userInput.value = ''
+    // 새로운 정답이 생성된고
+    pickRandomNum();
+    resultArea.textContent = "정답을 맞춰보세요.!!!"
   }
 
 
