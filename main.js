@@ -15,6 +15,7 @@ let resultArea = document.getElementById('result-area');
 let resetButton = document.getElementById('reset-button');
 let chance = 5; 
 let gameOver = false;
+let chanceArea = document.getElementById('chance-area');
 
 playButton.addEventListener('click', play);
 resetButton.addEventListener('click', reset)
@@ -26,6 +27,7 @@ function pickRandomNum() {
   function play() {
 
     chance --;
+    chanceArea.textContent = `남은기회: ${chance} 번`
     let userValue = userInput.value;
     if(userValue < computerNum) {
       resultArea.textContent="UP!!!"
