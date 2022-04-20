@@ -44,6 +44,8 @@ function play() {
 
   chances --;
   chanceArea.textContent = `남은기회 ${chances} 회`
+  historyNum.push(userValue)
+
 
   if(userValue > computerNum) {
     resultArea.textContent = "Down!!!"
@@ -54,7 +56,6 @@ function play() {
     gameOver = true
   }
 
-  historyNum.push(userValue)
  
 
   if(chances < 1) {
@@ -75,6 +76,11 @@ function reset(){
   pickRandomNum()
 
   resultArea.textContent = "결과값이 여기 나옵니다!"
+  gameOver = false;
+  playButton.disabled = false;
+  chances = 5;
+  chanceArea.innerHTML = `남은 기회: ${chances}`;
+  historyNum = [];
 
 }
 
