@@ -1,0 +1,16 @@
+body {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(imgs/img.jfif);
+}
+
+.game_wrapper {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}

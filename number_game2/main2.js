@@ -32,22 +32,22 @@ function pickRandomNum() {
 }
 
 function play() {
-  userValue = userInput.value;
+  const userValue = userInput.value;
 
   if (userValue < 1 || userValue > 100) {
-    resultArea.textContent = "1~100사이 숫자를 입력해 주세요"
+    resultTxt.textContent = "1~100사이 숫자를 입력해 주세요"
     return;
   }
 
   if (historyNum.includes(userValue)) {
-    resultArea.textContent = "이미 입력한 값입니다. 다른 숫자를 입력해주세요";
+    resultTxt.textContent = "이미 입력한 값입니다. 다른 숫자를 입력해주세요";
     return;
   }
 
   chances--;
   chanceArea.textContent = `남은기회 ${chances} 회`
-  historyNum.push(userValue)
 
+  historyNum.push(userValue)
 
   if (userValue > computerNum) {
     resultAreaImg.src = "https://media.giphy.com/media/r2puuhrnjG7vy/giphy.gif";
@@ -73,6 +73,10 @@ function play() {
   }
 
 
+}
+
+function focusInput() {
+  userInput.value = "";
 }
 
 function reset() {
