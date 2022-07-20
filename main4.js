@@ -66,7 +66,6 @@ function add() {
   if(userValue == computerNum) {
     imgArea.src = "https://i.pinimg.com/originals/bb/96/75/bb96754ec4caec9717822460c6762cb5.gif"
     resultArea.textContent = "맞췄습니다."
-    // gameOver == true;
     playButton.disabled = true
 
   } else if (userValue > computerNum) {

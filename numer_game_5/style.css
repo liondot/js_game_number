@@ -7,6 +7,7 @@ body {
   align-items: center;
   font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -1px;
+  background: rgb(255, 245, 245);
 }
 
 .container {
@@ -30,15 +31,21 @@ body {
   margin-bottom: 30px;
 }
 
-.divide_line {
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: center;
+.notice_area {
+  font-size: 20px;
+  color: #fff;
+}
+
+.result_area {
+  height: 40px;
+  color: red;
+  text-align: center;
+  line-height: 2;
 }
 
 .button_style:not(:last-child) {
   height: 30px;
-  width: 100px;
+  width: 50px;
   margin-top: 5px;
   border-radius: 50px;
   font-size: 15px;
@@ -72,7 +79,7 @@ body {
   color: #fff;
 }
 
-.img_area {
+.image_area {
   width: 500px;
   object-fit: 100%;
   object-position: center;
@@ -80,13 +87,13 @@ body {
 
 .user_value {
   height: 30px;
-  width: 40%;
+  width: 50%;
   border: 1px solid gray;
   outline: none;
   font-size: 20px;
   border-radius: 20px;
   text-indent: 20px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 #result_view {
