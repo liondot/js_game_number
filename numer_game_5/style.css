@@ -6,23 +6,18 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -1px;
 }
 
 .container {
-  border: 10px solid white;
+  border: 10px solid #fff;
   border-radius: 20px;
   text-align: center;
-  background-color: rgb(255, 178, 13);
+  background-color: skyblue;
   padding: 15px;
   width: 100%;
   max-width: 700px;
   margin: 20px;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  height: 100%;
 }
 
 .title {
@@ -35,15 +30,15 @@ section {
   margin-bottom: 30px;
 }
 
-.border-line {
+.divide_line {
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
 }
 
-.button-style {
-  height: 40px;
-  width: 70px;
+.button_style:not(:last-child) {
+  height: 30px;
+  width: 100px;
   margin-top: 5px;
   border-radius: 50px;
   font-size: 15px;
@@ -51,12 +46,27 @@ section {
   border: none;
   outline: none;
   cursor: pointer;
+  margin-right: 5px;
+  transition: all .3s;
 }
 
-.chance-area {
+.button_style:hover {
+  background: #000;
+  color: #fff;
+}
+
+.button_style:last-child {
+  display: flex;
+  border: none;
+  outline: none;
+  /* margin-right: auto; */
+  cursor: pointer;
+}
+
+.chance_area {
   padding: 10px 20px;
   margin: 20px;
-  background-color: brown;
+  background: rgb(44, 44, 44);
   border-radius: 20px;
   display: inline-block;
   color: #fff;
@@ -64,26 +74,19 @@ section {
 
 .img_area {
   width: 500px;
-  /* height: 300px; */
   object-fit: 100%;
   object-position: center;
 }
 
-.result {
-  font-size: 20px;
-  color: brown;
-  border-bottom: 1px solid #333;
-  display: inline-block;
-}
-
-#user-input {
+.user_value {
   height: 30px;
-  width: 50%;
-  border: none;
+  width: 40%;
+  border: 1px solid gray;
   outline: none;
   font-size: 20px;
   border-radius: 20px;
   text-indent: 20px;
+  margin-right: 20px;
 }
 
 #result_view {
